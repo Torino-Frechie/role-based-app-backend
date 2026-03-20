@@ -1,0 +1,36 @@
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+body.not-authenticated .role-logged-in {
+    display: none !important;
+}
+
+body.authenticated .role-logged-out {
+    display: none !important;
+}
+
+.role-admin {
+    display: none !important;
+}
+
+body.is-admin .role-admin {
+    display: block !important;
+}
+
+/* Helper Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+}
